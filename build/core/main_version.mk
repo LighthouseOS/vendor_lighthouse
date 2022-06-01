@@ -20,10 +20,10 @@ endif
 
 # Versioning props
 ADDITIONAL_SYSTEM_PROPERTIES  += \
-    org.pixelplusui.version=$(PPUI_BASE_VERSION) \
+    org.pixelplusui.version=$(LIGHTHOUSE_BASE_VERSION) \
     org.pixelplusui.version.display=$(CUSTOM_VERSION) \
     org.pixelplusui.build_date=$(CUSTOM_BUILD_DATE) \
     org.pixelplusui.build_date_utc=$(CUSTOM_BUILD_DATE_UTC) \
     org.pixelplusui.build_type=$(CUSTOM_BUILD_TYPE) \
-    org.pixelplusui.codename=$(PPUI_CODENAME) \
-    ro.pixelplusui.maintainer=$(PPUI_MAINTAINER)
+    org.pixelplusui.codename=$(LIGHTHOUSE_CODENAME) \
+    ro.pixelplusui.maintainer=$(LIGHTHOUSE_MAINTAINER)

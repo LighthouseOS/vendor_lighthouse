@@ -15,7 +15,7 @@
 # limitations under the License.
 #
 
-#$1=TARGET_DEVICE, $2=PRODUCT_OUT, $3=FILE_NAME $4=PPUI_BASE_VERSION
+#$1=TARGET_DEVICE, $2=PRODUCT_OUT, $3=FILE_NAME $4=LIGHTHOUSE_BASE_VERSION
 existingOTAjson=./vendor/officialdevices/devices/$1.json
 output=$2/$1.json
 

@@ -24,15 +24,7 @@ bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(CUSTOM_TARGET_PACKAGE)
 	$(hide) $(SHA256) $(CUSTOM_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(CUSTOM_TARGET_PACKAGE).sha256sum
 	$(hide) $(MD5) $(CUSTOM_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(CUSTOM_TARGET_PACKAGE).md5sum
-	$(hide) ./vendor/aosp/build/tasks/createjson.sh $(TARGET_DEVICE) $(PRODUCT_OUT) $(CUSTOM_VERSION).zip $(PPUI_BASE_VERSION)
-	@echo -e ${CL_CYN}""${CL_CYN}
-	@echo -e ${CL_CYN}"______ _          _______ _           _   _ _____ "${CL_CYN}
-	@echo -e ${CL_CYN}"| ___ (_)        | | ___ \ |         | | | |_   _|"${CL_CYN}
-	@echo -e ${CL_CYN}"| |_/ /___  _____| | |_/ / |_   _ ___| | | | | |  "${CL_CYN}
-	@echo -e ${CL_CYN}"|  __/| \ \/ / _ \ |  __/| | | | / __| | | | | |  "${CL_CYN}
-	@echo -e ${CL_CYN}"| |   | |>  <  __/ | |   | | |_| \__ \ |_| |_| |_ "${CL_CYN}
-	@echo -e ${CL_CYN}"\_|   |_/_/\_\___|_\_|   |_|\__,_|___/\___/ \___/ "${CL_CYN}
-	@echo -e ${CL_CYN}""${CL_CYN}
+	$(hide) ./vendor/lighthouse/build/tasks/createjson.sh $(TARGET_DEVICE) $(PRODUCT_OUT) $(CUSTOM_VERSION).zip $(LIGHTHOUSE_BASE_VERSION)
 	@echo -e ${CL_CYN}"===========-Package Completed-==========="${CL_RST}
 	@echo -e ${CL_BLD}${CL_YLW}"Zip: "${CL_YLW} $(CUSTOM_TARGET_PACKAGE)${CL_RST}
 	@echo -e ${CL_BLD}${CL_YLW}"MD5: "${CL_YLW}" `cat $(CUSTOM_TARGET_PACKAGE).md5sum | cut -d ' ' -f 1` "${CL_RST}
